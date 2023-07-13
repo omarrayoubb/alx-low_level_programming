@@ -1,3 +1,2 @@
 #!/bin/bash
-name="$CFILE"
-gcc -S $CFILE -o name.o  
+gcc -S $CFILE -o echo $CFILE | tr c o  
