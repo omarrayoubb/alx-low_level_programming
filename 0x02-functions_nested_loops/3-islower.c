@@ -2,20 +2,17 @@
 
 /**
  * _islower - show lowercase
- * @parameterc: integer
- * Description: show me 
+ * @c: integer
+ * Description: show me
  *
  * Return: 0 means no 1 means yes
  */
 int _islower(int c)
 {
-	if (c >= 97 && c <= 122) 
-	{
+	if (c >= 97 && c <= 122)
 		return (1);
-	}
-	
-	else {
+
+	else
 		return (0);
-	}
 }
 
