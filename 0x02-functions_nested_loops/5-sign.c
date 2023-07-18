@@ -1,11 +1,10 @@
 #include "main.h"
-
 /**
- * print__sign - show me the sign
+ * print_sign - show lowercase upper
  * @n: integer
+ * Description: show me
  *
- * Description: sign ign
- * Return: 0 if zero 1 if positive -1 if negative
+ * Return: 0 means no 1 means yes
  */
 int print_sign(int n)
 {
