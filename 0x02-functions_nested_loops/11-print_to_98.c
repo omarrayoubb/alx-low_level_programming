@@ -1,17 +1,36 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * add - add 2 numbers
- * @a: first number
- * @b: second number
+ * prin_to_98 - add 2 numbers
+ * @n: first number
  * Description: add 2 numbers together m3an
  *
- * Return: sum of 2 num
  */
-int add(int a, int b)
+void print_to_98(int n)
 {
-	int sum;
+	if (n <= 98)
+	{
+		for (int i = n ; i <= 98 ; i++)
+		{
 
-	sum = a + b;
-	return (sum);0i
+			if (i == 98)
+				 printf("%d ", i);
+			else
+				printf("%d, ", i);
+		}
+	}
+	else
+	{
+
+		for(int i = n ; i >= 98 ; i--)
+		{
+
+			 if(i == 98)
+                                 printf("%d ", i);
+                        else
+                                printf("%d, ", i);
+		}
+	
+	}
+	printf("\n");
 }
