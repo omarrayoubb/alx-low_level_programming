@@ -1,22 +1,22 @@
 #include "main.h"
 /**
- * print_diagonal - print
- * @n: input
- * Description: print a diagonal
+ * print_square - print
+ * @size: input
+ * Description: print a square
  *
  */
-void print_diagonal(int n)
+void print_square(int size)
 {
 	int i = 1;
 	int j = 1;
 
-	if (n <= 0)
+	if (size <= 0)
 		_putchar('\n');
 	else
 	{
-	while (i < n)
+	while (i <= size)
 	{
-		j = 1;
+		j = 0;
 		while (j < i)
 		{
 			_putchar(' ');
