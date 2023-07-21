@@ -7,22 +7,21 @@
  *
  * Return: 0 always means success
  */
+
 int main(void)
 {
-	int i, c, l;
+	long int i, n = 612852475143, l;
 
-	c = sqrt(612852475143);
-	for (i = 2; i <= c ; i++)
+	for (i = 2 ; i <= sqrt(n); i++)
 	{
-		if (612852475143 % i == 0)
+		if (n % i == 0)
 		{
 			l = i;
+			while(n % i == 0)
+				n /= i;
 		}
-		else
-			continue;
-
 	}
-	l = 137;
-	printf("%d\n", l);
+	printf("%ld\n", l);
 	return (0);
 }
+
