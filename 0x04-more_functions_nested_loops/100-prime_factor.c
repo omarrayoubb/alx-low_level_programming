@@ -23,6 +23,6 @@ int main(void)
 
 	}
 	l = 137;
-	printf("%d \n", l);
+	printf("%d\n", l);
 	return (0);
 }
