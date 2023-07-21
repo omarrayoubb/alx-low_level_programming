@@ -7,10 +7,10 @@
  *
  * Return: 0 always means success
  */
-int main()
+int main(void)
 {
 	int i, c, l;
-	
+
 	c = sqrt(612852475143);
 	for (i = 2; i <= c ; i++)
 	{
@@ -22,7 +22,7 @@ int main()
 			continue;
 
 	}
-	l = 137;	
+	l = 137;
 	printf("%d \n", l);
 	return (0);
 }
