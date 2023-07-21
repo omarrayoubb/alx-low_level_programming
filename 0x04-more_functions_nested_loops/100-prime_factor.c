@@ -17,11 +17,11 @@ int main(void)
 		if (n % i == 0)
 		{
 			l = i;
-			while(n % i == 0)
+			while (n % i == 0)
 				n /= i;
 		}
 	}
-	printf("%ld\n", l);
+	printf("%ld \n", l);
 	return (0);
 }
 
