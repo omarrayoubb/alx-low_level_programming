@@ -10,19 +10,22 @@
 
 int main(void)
 {
-	int i;
-	long n = 612852475143;
+	int i, l;
+	long num = 612852475143;
 
-	for (i = (int) sqrt(n); i > 2; i++)
+	while (num % 2 == 0)
+		num /= 2;
+	while (num % 3 == 0)
+		num /= 3;
+	for (i = 5; i <= sqrt(num); i++)
 	{
-		if (n % i == 0)
-		{
-			printf("%d\n", i);
-			break;
-		}
+		while (num % i == 0)
+			num /= i;
+		while (num % (i + 2) == 0)
+			num /= i + 2;
 	}
-
+	if (num > 4)
+		l = num;
+	printf("%d\n", l);
 	return (0);
 }
-	
-
