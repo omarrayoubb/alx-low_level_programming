@@ -1,4 +1,5 @@
 #include "main.h"
+define NULL ((void *)0)
 /**
  * _strchr - char
  * @s: input
@@ -19,5 +20,5 @@ char *_strchr(char *s, char c)
 		}
 		i++;
 	}
-	return ('\0');
+	return (NULL);
 }
