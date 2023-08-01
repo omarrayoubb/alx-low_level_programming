@@ -6,7 +6,7 @@
  * @size: input
  * Description: hello
  *
- * 
+ *
  */
 void print_diagsums(int *a, int size)
 {
@@ -15,7 +15,7 @@ void print_diagsums(int *a, int size)
 	for (i = 0; i < size; i++)
 	{
 		sum1 += a[i];
-		sum2 += a[size - 1 - i ];
+		sum2 += a[size - 1 - i];
 		a = a + size;
 	}
 	printf("%d, %d\n", sum1, sum2);
