@@ -1,4 +1,5 @@
 #include "main.h"
+int square(int n, int y);
 /**
  * _sqrt_recursion - print
  * @n: input
@@ -6,11 +7,18 @@
  *
  * Return: factorial
  */
-int square(int n, int y);
 int _sqrt_recursion(int n)
 {
 	return (square(n, 1));
 }
+/**
+ * square - print
+ * @n: input
+ * @y: input
+ * Description: square
+ *
+ * Return: square
+ */
 int square(int n, int y)
 {
 	if (y * y == n)
