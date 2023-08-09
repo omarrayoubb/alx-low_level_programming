@@ -10,18 +10,20 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, x, result = 0;
+	int result = 0;
+	char *cha;
 
-	for (i = 1; i < argc; i++)
+	while (--argc)
 	{
-		x = atoi(argv[i]);
-		if (*argv[i] < '0' || *argv[i] > '9')
-		{
+		for (cha = argv[argc] ; *cha; cha++)
+	{
+			if (*cha < '0' || *cha > '9')
+			{
 			printf("Error\n");
 			return (1);
-		}
-		else
-			result += x;
+			}
+	}
+	result += atoi(argv[argc]);
 	}
 	printf("%d\n", result);
 	return (0);
