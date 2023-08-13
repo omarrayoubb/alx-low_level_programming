@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * alloc_grid - alloccate
+ * free_grid - alloccate
  * @grid: width
  * @height: height
  * Description: hello worled
