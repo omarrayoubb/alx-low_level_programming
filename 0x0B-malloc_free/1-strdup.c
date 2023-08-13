@@ -18,7 +18,7 @@ char *_strdup(char *str)
 		return ('\0');
 	}
 	std = (char *) malloc(strlen(str) + 1);
-	if (!std)
+	if (!std || strlen(str) == 0)
 		free(std);
 	while (str[i] != '\0')
 	{
