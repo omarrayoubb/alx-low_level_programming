@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 /**
  * _strdup - copy
  * @str: duplicated string
@@ -9,7 +10,7 @@
  */
 char *_strdup(char *str)
 {
-	unsigned int x = sizeof(str), i = 0;
+	unsigned int x = strlen(str), i = 0;
 	char *std = (char *) malloc(sizeof(char) * x);
 
 	if (str == NULL)
