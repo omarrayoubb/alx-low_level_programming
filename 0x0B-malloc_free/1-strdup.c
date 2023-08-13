@@ -10,15 +10,15 @@
  */
 char *_strdup(char *str)
 {
-	unsigned int x = strlen(str), i = 0;
-	char *std = (char *) malloc(sizeof(char) * x + 1);
+	unsigned int i = 0;
+	char *std = (char *) malloc(sizeof(str));
 
-	if (!str || strlen(str) == 0)
+	if (str == NULL || std == NULL)
 	{
 		free(std);
 		return ('\0');
 	}
-	while (i < x)
+	while (i < sizeof(str))
 	{
 		*(std + i) = *(str + i);
 		i++;
