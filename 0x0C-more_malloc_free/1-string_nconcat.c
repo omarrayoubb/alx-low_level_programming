@@ -40,9 +40,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		for (; i <= n && j <= strlen(s1) + n; i++, j++)
 		{
 			concat[j] = s2[i];
-			if(s2[i] == '\0')
+			if (s2[i] == '\0')
 			break;
-	
 		}
 	}
 
