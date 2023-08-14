@@ -10,15 +10,15 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *calloc;
+	char *cali;
 	unsigned int i;
 
 	if (nmemb == 0 && size == 0)
 		return ('\0');
-	calloc = malloc(nmemb * size);
-	if (calloc == 0)
+	cali = malloc(nmemb * size);
+	if (cali == 0)
 		return ('\0');
 	for (i = 0; i < nmemb; i++)
-		calloc[i] = 0;
-	return (calloc);
+		cali[i] = 0;
+	return (cali);
 }
