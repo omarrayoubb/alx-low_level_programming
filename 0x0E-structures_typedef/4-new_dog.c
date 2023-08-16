@@ -1,6 +1,7 @@
 #include "dog.h"
 #include <string.h>
 #include <stdlib.h>
+#include "stdio.h"
 /**
 * new_dog - print
 * @name: name
@@ -13,6 +14,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new;
+	printf("hello");
 
 	if (name == NULL || age == 0 || owner == NULL)
 		return ('\0');
