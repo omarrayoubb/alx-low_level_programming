@@ -1,5 +1,6 @@
 #ifndef dog_H
 #define dog_H
+typedef struct dog dog_t;
 /**
 * struct dog - dog
 * @name: dog's name
@@ -7,7 +8,7 @@
 * @owner: dog's owner
 * Description: dog life cycle
 */
-typedef struct dog
+struct dog
 {
 	char *name;
 	float age;
