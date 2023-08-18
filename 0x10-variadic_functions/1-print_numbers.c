@@ -3,7 +3,7 @@
 * print_numbers - print
 * @separator: input
 * @n: input
-* Description: return the sum of the number
+* Description: promttttr;fgdk
 *
 *
 */
