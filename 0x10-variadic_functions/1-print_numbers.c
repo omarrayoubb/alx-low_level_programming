@@ -3,28 +3,27 @@
 * print_numbers - print
 * @separator: input
 * @n: input
-* Description: promttttr;fgdk
+* Description: hello
 *
 *
 */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i;
 	va_list args;
+	int i = n;
 
-	if (!n)
+	if (n == 0)
 	{
 		printf("\n");
 		return;
 	}
 	va_start(args, n);
-
-	for (i = 0; i < n; i++)
+	for (; i > 0 ; i--)
 	{
-		int m = va_arg(args, int);
+		int num = va_arg(args, int);
 
-		printf("%d", m);
-		if (separator != '\0' && i < n - 1)
+		printf("%d", num);
+		if (separator != NULL && i > 0)
 			printf("%s", separator);
 	}
 	printf("\n");
