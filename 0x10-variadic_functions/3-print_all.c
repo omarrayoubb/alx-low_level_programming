@@ -8,24 +8,26 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	int i = 0, j = 0;
+	int i = 0, j = 0, n, c;
 	char *nc;
+	double omar;
 	const char *mm = {"cfis"};
 
 	va_start(args, format);
 	while (format && format[i])
 	{
-		j = 0;
 		switch (format[i])
 		{
 			case 'f':
-				printf("%f", va_arg(args, double));
+				omar = va_arg(args, double), printf("%f", omar);
 				break;
 			case 'c':
-				printf("%c", va_args(args, int));
+				c = va_arg(args, int);
+				printf("%c", c);
 				break;
 			case 'i':
-				printf("%d", va_args(args, int));
+				n = va_arg(args, int);
+				printf("%d", n);
 				break;
 			case 's':
 				nc = va_arg(args, char *);
@@ -34,19 +36,15 @@ void print_all(const char * const format, ...)
 				else
 					printf("(nill)");
 				break;
-		}
+		} j = 0;
 		while (j < 4)
 		{
 			if (format[i] == mm[j] && format[i + 1] != 0)
 			{
 				printf(", ");
 				break;
-			}
-			j++;
-		}
-		i++;
+			} j++;
+		} i++;
 	}
 	printf("\n"), va_end(args);
 }
-
-
