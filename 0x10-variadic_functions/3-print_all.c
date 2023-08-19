@@ -39,7 +39,7 @@ void print_all(const char * const format, ...)
 		} j = 0;
 		while (mm[j])
 		{
-			if (format[i] == mm[j] && format[i + 1] != 0)
+			if (format[i] == mm[j])
 			{
 				printf(", ");
 				break;
