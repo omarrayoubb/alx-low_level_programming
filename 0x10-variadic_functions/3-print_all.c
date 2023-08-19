@@ -22,19 +22,19 @@ void print_all(const char * const format, ...)
 				omar = va_arg(args, double), printf("%f", omar);
 				break;
 			case 'c':
-				c = va_arg(args, int);
-				printf("%c", c);
+				c = va_arg(args, int), printf("%c", c);
 				break;
 			case 'i':
-				n = va_arg(args, int);
-				printf("%d", n);
+				n = va_arg(args, int), printf("%d", n);
 				break;
 			case 's':
 				nc = va_arg(args, char *);
 				if (nc != NULL)
+				{
 					printf("%s", nc);
-				else
-					printf("(nill)");
+					break;
+				}
+				printf("(nill)");
 				break;
 		} j = 0;
 		while (j < 4)
