@@ -37,7 +37,7 @@ void print_all(const char * const format, ...)
 				printf("(nill)");
 				break;
 		} j = 0;
-		while (j < 4)
+		while (mm[j])
 		{
 			if (format[i] == mm[j] && format[i + 1] != 0)
 			{
