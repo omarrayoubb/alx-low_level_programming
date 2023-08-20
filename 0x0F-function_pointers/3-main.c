@@ -21,16 +21,16 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (!argv[2] || strlen(argv[2]) > 1 || !sum)
+	/*if (!argv[2] || strlen(argv[2]) > 1 || !sum)
 	{
 		printf("Error\n");
 		exit(99);
-	}
-/*	if ((atoi(argv[3]) == 0) && (*argv[2] == '/' || *argv[2] == '%'))
+	}*/
+	if ((atoi(argv[3]) == 0) && (*argv[2] == '/' || *argv[2] == '%'))
 	{
 		printf("Error\n");
 		exit(100);
-	}*/
+	}
 	printf("%d\n", sum(a, b));
 	return (0);
 }
