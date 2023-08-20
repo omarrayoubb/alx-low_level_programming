@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (!argv[2] || !sum)
+	if (!argv[2] || strlen(argv[2]))
 	{
 		printf("Error\n");
 		exit(99);
