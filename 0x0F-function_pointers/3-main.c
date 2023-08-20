@@ -12,16 +12,19 @@
 */
 int main(int argc, char *argv[])
 {
-	int a = atoi(argv[1]), b = atoi(argv[3]);
+	int a, b;
 	int (*sum)(int, int);
 
-	sum = get_op_func(argv[2]);
+	
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if ((argv[2]) && (strlen(argv[2]) > 1 || !sum))
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+	sum = get_op_func(argv[2])
+	if ((!argv[2]) || (strlen(argv[2]) > 1 || !sum))
 	{
 		printf("Error\n");
 		exit(99);
