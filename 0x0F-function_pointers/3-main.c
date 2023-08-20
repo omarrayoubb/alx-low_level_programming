@@ -16,11 +16,11 @@ int main(int argc, char *argv[])
 	int (*sum)(int, int);
 
 	sum = get_op_func(argv[2]);
-	if (argc != 4)
+/*	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
-	}
+	}/*/
 	/*if (!argv[2] || strlen(argv[2]) > 1 || !sum)
 	{
 		printf("Error\n");
