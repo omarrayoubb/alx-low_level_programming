@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (!argc ||strlen(argv[2]) > 1 || !sum)
+	if (!argv ||strlen(argv[2]) > 1 || !sum)
 	{
 		printf("Error\n");
 		exit(99);
