@@ -9,11 +9,11 @@
 size_t print_listint(const listint_t *h)
 {
 	size_t count = 0;
-	const listint_t *tmp
+	const listint_t *tmp;
 
 	if (!h)
 		return (0);
-	tmp = h
+	tmp = h;
 	while (tmp)
 	{
 		printf("%d\n", tmp->n);
