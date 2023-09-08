@@ -6,7 +6,7 @@
 */
 void print_binary(unsigned long int n)
 {
-	unsigned long int dup, bit, count = 0, c;
+	unsigned long int bit, c, count = 0 ;
 	long int i;
 
 	if (n == 0)
@@ -21,17 +21,19 @@ void print_binary(unsigned long int n)
 	}
 	else
 	{
-		dup = n;
-		while (dup > 0)
-		{
-			dup = dup / 2;
-			count++;
-		}
-		for (i = count - 1 ;  i >= 0; i--)
+		for (i = 63 ;  i >= 0; i--)
 		{
 			bit = n >> i;
 			c = bit & 1;
-			_putchar(c + '0');
+			if (c == 1)
+			{
+				_putchar(c + '0');
+				count++;
+			}
+			else if (count)
+				_putchar('0');
 		}
+	if (!count)
+		_putchar('0');
 	}
 }
