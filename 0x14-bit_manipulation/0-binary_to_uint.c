@@ -11,7 +11,7 @@
 */
 unsigned int binary_to_uint(const char *b)
 {
-	int n, sum = 0, base = 1, x;
+	long  n, sum = 0, base = 1, x;
 
 
 	if (!b)
@@ -24,8 +24,6 @@ unsigned int binary_to_uint(const char *b)
 		b++;
 		continue;
 	}
-	if (!n)
-		return (0);
 	while (n > 0)
 	{
 		x = n % 10;
