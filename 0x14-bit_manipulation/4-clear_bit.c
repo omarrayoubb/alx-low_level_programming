@@ -10,12 +10,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int current;
 
-	if (index == 0)
-	{
-		*n = *n & 0;
-		return (1);
-	}
-	else if (index > 63)
+	if (index > 63)
 		return (-1);
 	current = 1 << index;
 	*n = *n & (~current);
