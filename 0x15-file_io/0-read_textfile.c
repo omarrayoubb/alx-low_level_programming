@@ -1,4 +1,5 @@
 #include "main.h"
+#include "string.h"
 /**
 * read_textfile - read
 * @filename: filename
@@ -8,7 +9,7 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t n, r;
+	ssize_t n, r, w;
 	char *c = malloc(100 * sizeof(char));
 
 	r = open(filename, O_RDONLY);
@@ -17,8 +18,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	n = read(r, c, letters);
 	if (n < 0)
 		return (0);
-	write(STDOUT_FILENO, c, letters);
-	return (n);
-
+ 	w = write(STDOUT_FILENO, c, strlen(c));
+	if (w != n)
+		return (0);
+	return (w);
 }
 
