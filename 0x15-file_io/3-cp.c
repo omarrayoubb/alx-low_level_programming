@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	f2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((x = read(fd_r, buf, 1024)) > 0)
+	while ((x = read(f1, buf, 1024)) > 0)
 	{
 		if (f2 < 0 || write(f2, buf, x) != x)
 		{
@@ -38,8 +38,8 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	m = close(fd_r);
-	n = close(fd_w);
+	m = close(f1);
+	n = close(f2);
 	if (m < 0 || n < 0)
 	{
 		if (m < 0)
@@ -49,3 +49,4 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	return (0);
+}
